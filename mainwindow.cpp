@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+const QString AUTOMATICO = "Automatico";
+const QString MANUAL = "Manual";
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -28,6 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
     for(auto& item : QSerialPortInfo::standardBaudRates())
         ui->box_velocidade->addItem(QString::number(item) );
 
+
     connect(&serial,
             SIGNAL(readyRead()),
             this,
@@ -40,7 +44,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::dadosRecebidos()
+void MainWindow::dadosRecebidos() //json que esta reccebendo sdo arduino
 {
     auto data = serial.readAll();
     auto dados = QJsonDocument::fromJson(data).object().toVariantMap();
@@ -66,7 +70,7 @@ void MainWindow::dadosRecebidos()
         }
 }
 
-void MainWindow::on_btnPlug_clicked()
+void MainWindow::on_btnPlug_clicked() //
 {
     plugStatus = !plugStatus;
 
@@ -82,25 +86,31 @@ void MainWindow::on_btnPlug_clicked()
 }
 
 
-void MainWindow::on_btnModo_Activated(const QString &arg1)
+void MainWindow::on_btnModo_Activated(const QString &arg1) //manda  o json para o arduino
 {
-    if(ui->combo_Sistema->setCurrentText("Automatico")) {
-        (arg1 == "Modo automatico") serial.write("{\"MODO\": 1}"), ui->labeltxt->setText(text[1]);
+    //if(ui->combo_Sistema->setCurrentText("Automatico")) {
+       if (arg1 == AUTOMATICO){
+           serial.write("{\"MODO\": 1}");
+       }
 
-    }else if(ui->combo_Sistema->setCurrentText("Manual")){
-        (arg1 == "Modo manual") serial.write("{\"MODO\": 2}"), ui->labeltxt->setText(text[2]);
+       if (arg1 == MANUAL){
+           serial.write("{\"MODO\": 2}");
+       }
+} //falta dizer ao json que é para desligar ou ligar a valvula
 
-    }else{
-        ();
+void MainWindow::on_btnLigaDesliga_clicked()
+{
+    if(ui->combo_Sistema->currentText() == MANUAL){
+        if(status_valvula == true)
+            status_valvula = false;
+
+        if(status_valvula == false)
+            status_valvula = true;
     }
+    else{
+        QMessageBox::warning(this,"AVISO!","O Modulo Manual não está ativado, você não pode ligar/desligar.");
+    }
+
 }
 
-
-/*void MainWindow::on_btn_desligasist_clicked()
-{
-  //  serial.write("{\"T_OFF\": 0}\n");
- //   ui->lbl_lcd->setText("Em funcionamento...");
-    ui->label->setEnabled(0);
-}
-*/
 

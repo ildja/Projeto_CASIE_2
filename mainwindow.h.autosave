@@ -37,6 +37,10 @@ private slots:
 
 //    void on_cBox_serial_activated(const QString &arg1);
 
+    void on_btnLigaDesliga_clicked();
+    
+    void on_combo_Sistema_activated(const QString &arg1);
+    
 private:
     Ui::MainWindow *ui;
     bool plugStatus = false;

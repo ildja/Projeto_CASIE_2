@@ -172,6 +172,19 @@ color: rgb(0, 0, 0);</string>
        <string>Conexão</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btnLigaDesliga">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>170</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>botao</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
@@ -199,6 +212,11 @@ font: 57 12pt &quot;Ubuntu&quot;;</string>
         <height>31</height>
        </rect>
       </property>
+      <item>
+       <property name="text">
+        <string>---</string>
+       </property>
+      </item>
       <item>
        <property name="text">
         <string>Automatico</string>
