@@ -25,17 +25,17 @@ MainWindow::MainWindow(QWidget *parent) :
             this,
             SLOT(dadosRecebidos()));
 
-    for(auto& item : QSerialPortInfo::availablePorts())
-        ui->box_serial->addItem(item.portName());
+//    for(auto& item : QSerialPortInfo::availablePorts())
+//        ui->box_serial->addItem(item.portName());
 
-    for(auto& item : QSerialPortInfo::standardBaudRates())
-        ui->box_velocidade->addItem(QString::number(item) );
+//    for(auto& item : QSerialPortInfo::standardBaudRates())
+//        ui->box_velocidade->addItem(QString::number(item) );
 
 
-    connect(&serial,
-            SIGNAL(readyRead()),
-            this,
-            SLOT(dadosRecebidos()));
+//    connect(&serial,
+//            SIGNAL(readyRead()),
+//            this,
+//            SLOT(dadosRecebidos()));
    }
 
 MainWindow::~MainWindow()
@@ -98,7 +98,7 @@ void MainWindow::on_btnModo_Activated(const QString &arg1) //manda  o json para 
        }
 } //falta dizer ao json que é para desligar ou ligar a valvula
 
-void MainWindow::on_btnLigaDesliga_clicked()
+/*void MainWindow::on_btnLigaDesliga_clicked()
 {
     if(ui->combo_Sistema->currentText() == MANUAL){
         if(status_valvula == true)
@@ -111,6 +111,6 @@ void MainWindow::on_btnLigaDesliga_clicked()
         QMessageBox::warning(this,"AVISO!","O Modulo Manual não está ativado, você não pode ligar/desligar.");
     }
 
-}
+}*/
 
-
+//LEMBRAR DE COLOCAR UM BOTAO BOOL DE DESLIGA E LIGA VALVULA, SERIA BOM UM BOTÃO DE VALVULA, EM VEZ DAQUELE QUE TEM DESLIGAR
