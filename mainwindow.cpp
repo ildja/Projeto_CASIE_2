@@ -59,7 +59,7 @@ void MainWindow::dadosRecebidos() //json que esta reccebendo sdo arduino
         ui->lbl_umidade_solo->setText(Umidade_Solo);
         }
 
-    if(dados.contains("TEMPERATURA_AR")){
+ /*   if(dados.contains("TEMPERATURA_AR")){
         Temperatura_ar = dados["TEMPERATURA_AR"].toString();
         ui->lbl_temperatura_ar->setText(Temperatura_ar);
         }
@@ -67,7 +67,7 @@ void MainWindow::dadosRecebidos() //json que esta reccebendo sdo arduino
     if(dados.contains("UMIDADE_AR")){
         Umidade_ar = dados["UMIDADE_AR"].toString();
         ui->lbl_umidade_ar->setText(Umidade_ar);
-        }
+        }*/
 }
 
 void MainWindow::on_btnPlug_clicked() //
@@ -98,7 +98,7 @@ void MainWindow::on_btnModo_Activated(const QString &arg1) //manda  o json para 
        }
 } //falta dizer ao json que é para desligar ou ligar a valvula
 
-/*void MainWindow::on_btnLigaDesliga_clicked()
+void MainWindow::on_btnLigaDesliga_clicked()
 {
     if(ui->combo_Sistema->currentText() == MANUAL){
         if(status_valvula == true)
@@ -111,6 +111,6 @@ void MainWindow::on_btnModo_Activated(const QString &arg1) //manda  o json para 
         QMessageBox::warning(this,"AVISO!","O Modulo Manual não está ativado, você não pode ligar/desligar.");
     }
 
-}*/
+}
 
 //LEMBRAR DE COLOCAR UM BOTAO BOOL DE DESLIGA E LIGA VALVULA, SERIA BOM UM BOTÃO DE VALVULA, EM VEZ DAQUELE QUE TEM DESLIGAR

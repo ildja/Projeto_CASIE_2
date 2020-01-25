@@ -199,7 +199,7 @@ color: rgb(255, 255, 255);
      <property name="geometry">
       <rect>
        <x>400</x>
-       <y>180</y>
+       <y>310</y>
        <width>221</width>
        <height>91</height>
       </rect>
@@ -254,7 +254,7 @@ font: 57 12pt &quot;Ubuntu&quot;;</string>
       <rect>
        <x>50</x>
        <y>290</y>
-       <width>691</width>
+       <width>331</width>
        <height>151</height>
       </rect>
      </property>
@@ -268,7 +268,7 @@ color: rgb(0, 0, 0);</string>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>50</x>
         <y>30</y>
         <width>101</width>
         <height>21</height>
@@ -281,7 +281,7 @@ color: rgb(0, 0, 0);</string>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>190</x>
         <y>30</y>
         <width>111</width>
         <height>21</height>
@@ -289,32 +289,6 @@ color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>Umidade do solo</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>30</y>
-        <width>121</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Temperatura do ar</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>30</y>
-        <width>101</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Umidade do ar</string>
       </property>
      </widget>
      <widget class="QFrame" name="frame_2">
@@ -375,7 +349,7 @@ font: 57 16pt &quot;Ubuntu&quot;;</string>
      <widget class="QFrame" name="frame_5">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>170</x>
         <y>60</y>
         <width>141</width>
         <height>61</height>
@@ -427,122 +401,12 @@ font: 57 16pt &quot;Ubuntu&quot;;</string>
        </widget>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_6">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>60</y>
-        <width>141</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(65, 181, 223);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QFrame" name="frame_9">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>120</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QLabel" name="lbl_temperatura_ar">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>5</y>
-          <width>121</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);
-font: 57 16pt &quot;Ubuntu&quot;;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </widget>
-     </widget>
-     <widget class="QFrame" name="frame_7">
-      <property name="geometry">
-       <rect>
-        <x>530</x>
-        <y>60</y>
-        <width>141</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(65, 181, 223);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QFrame" name="frame_10">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>120</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QLabel" name="lbl_umidade_ar">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>121</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(0, 0, 0);
-font: 57 16pt &quot;Ubuntu&quot;;</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </widget>
-     </widget>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
        <x>650</x>
-       <y>190</y>
+       <y>310</y>
        <width>71</width>
        <height>20</height>
       </rect>
@@ -559,7 +423,7 @@ color: rgb(0, 0, 0);</string>
      <property name="geometry">
       <rect>
        <x>630</x>
-       <y>210</y>
+       <y>340</y>
        <width>111</width>
        <height>61</height>
       </rect>
@@ -575,10 +439,10 @@ color: rgb(0, 0, 0);</string>
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>490</x>
+       <x>430</x>
        <y>30</y>
-       <width>191</width>
-       <height>151</height>
+       <width>301</width>
+       <height>241</height>
       </rect>
      </property>
      <property name="styleSheet">
